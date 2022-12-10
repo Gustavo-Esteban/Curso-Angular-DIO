@@ -4,7 +4,7 @@
 
   <div class="card__title">
     <h3>
-      {{ pokemon.name }}
+      {{ pokemon.name | titlecase | transformador: 'esteban': '123' }}
     </h3>
   </div>
 
@@ -13,7 +13,7 @@
   </div>
 
   <div class="card__stats">
-    <span class="card__stats__type" *ngFor="let t of pokemon.types"> {{ t.type.name }}</span>
+    <span class="card__stats__type" *ngFor="let t of pokemon.types"> {{ t.type.name | uppercase}}</span>
   </div>
 
 </div>
